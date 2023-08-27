@@ -27,30 +27,12 @@ class HttpResponse(JsonResponse):
 def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
-def render(
+(function) def render(
     request: HttpRequest,
     template_name: str | Sequence[str],
     context: Mapping[str, Any] | None = ...,
     content_type: str | None = ...,
     status: int | None = ...,
     using: str | None = ...
-)-> HttpResponse;
-
-@csrf_exempt
-
-def get_data(request):
-    if request.method == 'GET':
-        data = request.GET.get('data')
-        return HttpResponse(data)
-    else:
-        return HttpResponse("Hello, world. You're at the polls index.")
-
-
-
-    
-
-
-    
-
-
+) -> HttpResponse
 

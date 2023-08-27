@@ -16,7 +16,4 @@ class TestViews(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Hello, world. You're at the polls index.")
         
-
-
-
         
